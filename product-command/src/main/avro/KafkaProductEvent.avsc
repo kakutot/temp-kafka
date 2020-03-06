@@ -1,0 +1,56 @@
+{
+  "type": "record",
+  "name": "KafkaProductEvent",
+  "namespace": "com.larecette.product.command.temp",
+  "fields": [
+    {
+      "name": "productKafka",
+      "type": {
+        "type": "record",
+        "name": "ProductKafka",
+        "fields": [
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "proteins",
+            "type": "double"
+          },
+          {
+            "name": "carbohydrates",
+            "type": "double"
+          },
+          {
+            "name": "fats",
+            "type": "double"
+          },
+          {
+            "name": "calories",
+            "type": "double"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "measureUnit",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "eventType",
+      "type": {
+        "type": "enum",
+        "name": "EventType",
+        "symbols": [
+          "CREATE",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    }
+  ]
+}
